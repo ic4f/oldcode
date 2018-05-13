@@ -1,0 +1,40 @@
+//This list includes all permissions to the CMS, organized by categories, each with a unique id.
+//id and parentId can be digits or digits preceeded with a "c" - which indicates a category
+//There must be 3 levels for each permission: cat > subcat > permission. Therefore, a parent of a category must be a first-level category,
+//		and a parent of permission must be a second-level category.
+//Only cats and subcats can be parents.
+//c-1 marks "no parent" 
+//and/or is displayed for permissions only.
+//"and" means that the permission can be added to others - i.e., displayed as a checkbox.
+//"or" means that only one of the permissions in this subcat can be selected - i.e., radios for each or + "none"
+//ids do not have to be sequential.
+//the code is the name of the public static int field in CmsCore.PermissionCode. Create those fields before processing this file.
+
+//current last used cat Id = 9
+//current last used perm Id = 6
+
+//id -- parentid -- and/or -- name -- code
+
+c1	c-1		"Lineup Administration"
+
+c2	c1			"Lineups by Assigned Cases"
+1	c2	or			"create + administer"		"LineupAdmin_Lineups_CreateAdminister"
+
+c3	c1			"Results by Assigned Cases"
+2	c3	or			"view"						"LineupAdmin_Results_View"
+
+c4	c-1		"Operations"
+
+c5	c4			"Cases, Suspects, Lineups"
+3	c5	or			"full control"				"Operations_CSL_Full"
+
+c6	c4			"Lineup Results"
+4	c6	or			"full control"				"Operations_Results_Full"
+
+c7	c-1		"System Settings"
+
+c8	c7			"Users, Roles & Permissions"
+5	c8	or			"full control"				"SystemSettings_UserRoles_Full"
+
+c9	c7			"Photo Database"
+6	c9	or			"full control"				"SystemSettings_Photos_Full"

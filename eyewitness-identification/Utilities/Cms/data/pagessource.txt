@@ -1,0 +1,82 @@
+// Ranking is based on how pages appear in this list. It matters only for pages which are in the menu.
+// Indenting is optional.
+// If a page is not in the menu, its parent MUST be in the menu, or else the system won't know 
+//		what menu to display. Besides, if a page is not in the menu, most likely it's content
+//		depends on user selections on the previous/parent page -> so displaying it in the 
+//		context menu would be a headache.
+// Permissions are a csv list of ids. If the list is empty, no permissions are required (like the home page)
+// Permissions must correspond to permission ids in the permission source file.
+// At least 1 matching perm in the user cookie is suffecient for the page/menu option to be displayed.
+// Add pages ONE LINE AT A TIME - or else it may get messy.
+
+//last used id  = 53
+
+//id -- parentId -- menu title -- title -- url -- required permissions (any in the list)
+
+// default.aspx MUST be id = 1
+
+1	-1	"Home"							"Home"							"default.aspx"							""			
+2	1		""							"My Account"					"myaccount.aspx"						""			
+3	1		""							"Help"							"help.aspx"								""			
+
+
+
+4	-1	"Lineup Administration"			"Lineup Administration"			"lineupadmin/default.aspx"				"1,2"
+
+5	4		"Create Lineup"				"Create Lineup: Step 1 of 2"	"lineupadmin/lineupAdd.aspx"			"1"
+52	5			""						"Create Lineup: Step 2 of 2"	"lineupadmin/lineupAdd2.aspx"			"1"
+6	4		"Administer Lineup"			"Administer Lineup: Select Lineup"	"lineupadmin/lineupAdminister.aspx"	"1"
+53	6			""						"Administer Lineup: Confirm Lineup"	"lineupadmin/lineupAdminister2.aspx" "1"
+7	4		"Lineups & Results"			"List of Lineups"				"lineupadmin/lineupList.aspx"			"1,2"
+8	7			""						"Lineup Details"				"lineupadmin/lineupDetails.aspx"		"1"
+9	7			""						"Lineup Results"				"lineupadmin/resultList.aspx"			"2"
+10	7			""						"Lineup Result Details"			"lineupadmin/resultDetails.aspx"		"2"
+
+
+
+11	-1	"Operations"					"Operations"					"operations/default.aspx"				"3,4"
+
+12	11		"Cases"						"Cases"							"operations/cases.aspx"					"3"
+13	12			"New Case"				"New Case"						"operations/caseAdd.aspx"				"3"
+14	12			"List of Cases"			"List of Cases"					"operations/caseList.aspx"				"3"
+15	14				""					"Case Details"					"operations/caseDetails.aspx"			"3"
+16	14				""					"Edit Case"						"operations/caseEdit.aspx"				"3"
+17	14				""					"Assign Users to Case"			"operations/caseUsers.aspx"				"3"
+18	14				""					"Assign Suspects to Case"		"operations/caseSuspects.aspx"			"3"
+
+19	11		"Suspects"					"Suspects"						"operations/suspects.aspx"				"3"
+20	19			"New Suspect"			"New Suspect"					"operations/suspectAdd.aspx"			"3"
+21	19			"List of Suspects"		"List of Suspects"				"operations/suspectList.aspx"			"3"
+22	21				""					"Suspect Details"				"operations/suspectDetails.aspx"		"3"
+23	21				""					"Edit Suspect"					"operations/suspectEdit.aspx"			"3"
+
+24	11		"Lineups & Results"			"List of Lineups"				"operations/lineups.aspx"				"3,4"
+25	24			""						"Lineup Details"				"operations/lineupDetails.aspx"			"3"
+26	24			""						"Lineup Results"				"operations/results.aspx"				"4"
+27	24			""						"Lineup Result Details"			"operations/resultDetails.aspx"			"4"
+
+
+
+28	-1	"System Settings"				"System Settings"				"settings/default.aspx"					"5,6"
+
+29	28		"Users"						"Users"							"settings/users.aspx"					"5"
+30	29			"New User"				"New User"						"settings/userAdd.aspx"					"5"
+31	29			"List of Users"			"List of Users"					"settings/userList.aspx"				"5"
+32	31				""					"User Details"					"settings/userDetails.aspx"				"5"
+33	31				""					"Edit User"						"settings/userEdit.aspx"				"5"
+34	31				""					"Set User Roles"				"settings/userRoles.aspx"				"5"
+50	31				""					"Assign User to Cases"			"settings/userCases.aspx"				"5"
+35	29			"User Archive"			"Archived User Accounts"		"settings/userArchive.aspx"				"5"
+
+36	28		"Roles & Permissions"		"Roles & Permissions"			"settings/roles.aspx"					"5"
+37	36			"New Role"				"New Role"						"settings/roleAdd.aspx"					"5"
+38	36			"List of Roles"			"List of Roles"					"settings/roleList.aspx"				"5"
+39	38				""					"Edit Role"						"settings/roleEdit.aspx"				"5"
+40	38				""					"Set Role Users"				"settings/roleUsers.aspx"				"5"
+41	38				""					"Set Role Permissions"			"settings/rolePermissions.aspx"			"5"
+
+44	28		"Photo Database"			"Photo Database"				"settings/photos.aspx"					"6"
+45	44			"Add Photos"			"Add Photos"					"settings/photoAdd.aspx"				"6"
+51	45				""					"Categorize Photos"				"settings/photoCategorize.aspx"			"6"
+46	44			"Browse Database"		"Browse Database"				"settings/photoList.aspx"				"6"
+47	46				""					"Edit Photo"					"settings/photoEdit.aspx"				"6"

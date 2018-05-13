@@ -1,0 +1,34 @@
+/******************** COOLGRID STYLES ********************/
+
+.gridTableData
+{
+	border: solid 1px #cacaca;
+	background-color: #ffffff;
+	width: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+}
+
+.gridTableHeader
+{
+	color: white;
+	background-color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 	
+	font-size: 12px;
+}
+
+.gridOuterTable
+{
+	width: 100%;		
+	border: solid 1px #cacaca;
+	border-collapse:collapse;	
+	background-image: url(e4e4e4.gif);
+}
+
+html>body .gridOuterTable
+{
+	background-image: none;
+	background-color: #e4e4e4;		
+}
+
+/******************** END OF COOLGRID STYLES ********************/

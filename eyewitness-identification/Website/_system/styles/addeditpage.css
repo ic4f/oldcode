@@ -1,0 +1,65 @@
+
+/* ---------------------- buttons area ------------------- */
+.buttons {
+    background-color: #f0f0f0;
+    border: solid 1px #cacaca;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+    .buttons .button {
+        width: 90px;
+        height: 25px;
+    }
+/* ---------------------- end of buttons area ------------- */
+
+
+/* ---------------------- confirm panel ------------------- */
+.panel-confirm {
+    border: solid 1px green;
+    padding: 10px;
+    color: #006600;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 11px;
+}
+/* ---------------------- end of confirm panel ------------- */
+
+
+/* ---------------------- error panel ---------------------- */
+.panel-error {
+    border: solid 1px red;
+    padding: 10px;
+    color: red;
+    background-color: #FDFCE3;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 11px;
+}
+/* ---------------------- end of error panel ---------------- */
+
+
+/* ---------------------- form panel ------------------------ */
+.panel-form {
+    border: solid 1px #cacaca;
+    background-color: #f8f8f8;
+    padding: 5px;
+    font-size: 11px;
+}
+
+    .panel-form .field-title {
+        margin-bottom: 2px;
+        font-weight: bold;
+        color: #414141;
+    }
+
+    .panel-form .field-input {
+        margin: 0px;
+    }
+/* ---------------------- end of form panel ------------------ */
+
+
+
+
