@@ -5,9 +5,8 @@
 **Web-based eyewitness identification system for lineup construction and administration.**
 Developed in collaboration with Professor Otto MacLin and the Waterloo Police Department. Intended use: by police officers, using PDAs and/or smartphones, or laptops.
  
-* **Technology:** ASP.NET, SQL Server; written in C# with HTML/CSS and JavaScript
+* **Technology:** ASP.NET, SQL Server; written in C#, HTML/CSS and JavaScript
 * **Developed:** 2006-2008 (2 versions)
-* **Status:** Used in research
 
 ## Functionality
 * Creating and administering sequential lineups  
