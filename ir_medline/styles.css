@@ -1,0 +1,75 @@
+body,td,div,.p,a
+{
+	font-family:arial,sans-serif; 
+	font-size: 11pt;
+}
+
+div,td{color:#000}
+.f,.fl:link{color:#6f6f6f}
+a:link,.w,a.w:link,.w a:link{color:#00c}
+a:visited,.fl:visited{color:#551a8b}
+a:active,.fl:active{color:#f00}
+.t a:link,.t a:active,.t a:visited,.t{color:#000}
+.t{background-color:#e5ecf9}
+.k{background-color:#36c}
+.j{width:34em}
+.h{color:#36c}
+.i,.i:link{color:#a90a08}
+.a,.a:link{color:#008000}
+.z{display:none}
+div.n {margin-top: 1ex}
+.n a{font-size:10pt; color:#000}
+.n .i{font-size:10pt; font-weight:bold}
+.q a:visited,.q a:link,.q a:active,.q {color: #00c; }
+.b{font-size: 12pt; color:#00c; font-weight:bold}
+.ch{cursor:pointer;cursor:hand}
+.e{margin-top: .75em; margin-bottom: .75em}
+.g{margin-top: 1em; margin-bottom: 1em}
+
+
+.tablink 
+{
+	color: #4A65C7;
+	text-decoration: none;
+	font-size: 10pt;
+	font-weight: bold;
+
+}
+
+.tablink:visited:hover
+{
+	color: navy;
+	text-decoration: underline;
+}
+
+.tablink:hover
+{
+	color: navy;
+	text-decoration: underline;
+}
+
+.tablink:visited { color: #184DB9; }
+.tablink:active { color: #4A65C7; }
+
+.resultscount 
+{
+	color: #000000; 
+	font-size: 10pt;
+}
+
+.gridttl
+{
+	color: #414141;
+	font-weight: bold;
+}
+
+.docviewttl
+{
+	color: #414141;
+	font-weight: bold;
+}
+
+.highlight
+{
+	background-color: #00ff00;
+}
