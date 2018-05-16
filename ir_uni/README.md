@@ -24,7 +24,7 @@
 **Indexing** 
 * Built and improved upon [my previous project](https://github.com/ic4f/oldcode/tree/master/ir_asu).
 
-**Search and browse UI:**
+**Search and browse UI**
 * Search using a combination of PageRank weights and 4 different indexes: unweighted/weighted terms and with or without external anchor text
 * For each page, view:
   * inbound and outbound links, including inbound link anchor text
