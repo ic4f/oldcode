@@ -2,7 +2,7 @@
 
 > **This project is deprecated and not maintained.**
 
-**Experiments with PageRank, Authorities/Hubs; and K-Means, Buckshot and Bisecting K-Means clustering algorithms.** This was my project in [information retrieval, mining and integration](http://rakaposhi.eas.asu.edu/cse494) during my grad studies at [ASU](https://cidse.engineering.asu.edu).  
+**Experiments with PageRank, Hubs and Authorities; and K-Means, Buckshot and Bisecting K-Means clustering algorithms.** This was my project in [information retrieval, mining and integration](http://rakaposhi.eas.asu.edu/cse494) during my grad studies at [ASU](https://cidse.engineering.asu.edu).  
 
 * **Technology:** .NET; written in C# (and HTML/CSS for demo page)
 * **Developed:** 2007
