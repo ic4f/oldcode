@@ -1,0 +1,22 @@
+<%@ Page language="c#" AutoEventWireup="false" Inherits="Foundation.Website.StandardPage" %>
+<%@ Register TagPrefix="uc" TagName="layout" Src="_system/controls/LayoutHelper.ascx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
+
+<html>
+  <head>
+    <title id="ctlTitle" runat="server"/>
+    <base id="ctlBaseTag" runat="server"/>
+    <meta name="pageId" content="[pageid]" id="ctlPageId" runat="server"/>    
+    <link href="_system/styles/main.css" rel="stylesheet" type="text/css"> 
+  </head>
+  <body>	
+    <form id="Form1" method="post" runat="server">
+			<div id="pagetitle"><asp:literal id="ltrPageTitle" runat="server"/></div>
+			<div id="content">
+				<asp:literal id="ltrPageContent" runat="server"/>
+			</div>							
+			<uc:layout id="ucLayoutHelper" runat="server" />	
+     </form>	
+  </body>
+</html>

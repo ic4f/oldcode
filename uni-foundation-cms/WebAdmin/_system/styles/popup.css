@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    background-image: url(../images/layout/background-popup.gif);
+    background-repeat: no-repeat;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+table {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+#popuplayout {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    right: 25px;
+    width: 95%;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+html > body #popuplayout {
+    width: auto;
+}
+
+.closeWindowP {
+    margin-top: 0px;
+    margin-bottom: -15px;
+}

@@ -1,0 +1,151 @@
+// Ranking is based on how pages appear in this list. It matters only for pages which are in the menu.
+// Indenting is optional.
+// If a page is not in the menu, its parent MUST be in the menu, or else the system won't know 
+//		what menu to display. Besides, if a page is not in the menu, most likely it's content
+//		depends on user selections on the previous/parent page -> so displaying it in the 
+//		context menu would be a headache.
+// Permissions are a csv list of ids. If the list is empty, no permissions are required (like the home page)
+// Permissions must correspond to permission ids in the permission source file.
+// At least 1 matching perm in the user cookie is suffecient for the page/menu option to be displayed.
+// Add pages ONE LINE AT A TIME - or else it may get messy.
+
+//last used id  = 115
+
+//id -- parentId -- menu title -- title -- url -- required permissions (any in the list)
+
+// default.aspx MUST be id = 1
+
+
+1	-1	"Home"							"Home"							"default.aspx"							""			
+
+
+
+96	-1	"Website Organization"			"Website Organization"			"websiteorg/default.aspx"				"1,2,41,44"
+
+3	96		"Website Menus"				"Website Menus"					"websiteorg/menus.aspx"					"1,2"
+4	3			""						"Edit Menu"						"websiteorg/menuEdit.aspx"				"1,2"
+
+97	96		"Page Groups"				"Page Groups"					"websiteorg/pageGroups.aspx"			"41"
+
+
+2	-1	"Web Pages"						"Web Pages"						"webpages/default.aspx"					"3,4,5,6,7,8,12,13,14,15,16,17,18,19,20,21,22,23"
+
+5	2		"Standard Pages"			"Standard Pages"				"webpages/pages.aspx"					"3,4,5"
+6	5			"New Page"				"New Standard Page"				"webpages/pageAdd.aspx"					"4,5"
+7	5			"List of Pages"			"List of Standard Pages"		"webpages/pageList.aspx"				"3,4,5"
+8	7				""					"Edit Standard Page"			"webpages/pageEdit.aspx"				"4,5"
+
+9	2		"News"						"News"							"webpages/news.aspx"					"6,7,8"
+10	9			"Post News"				"Post News"						"webpages/newsAdd.aspx"					"7,8"
+11	9			"List of News"			"List of News"					"webpages/newsList.aspx"				"6,7,8"
+12	11				""					"Edit News"						"webpages/newsEdit.aspx"				"7,8"
+
+17	2		"Donor Stories"				"Donor Stories"					"webpages/dstories.aspx"				"12,13,14"
+18	17			"New Story"				"New Donor Story"				"webpages/dstoryAdd.aspx"				"13,14"
+19	17			"List of Stories"		"List of Donor Stories"			"webpages/dstoryList.aspx"				"12,13,14"
+20	19				""					"Edit Donor Story"				"webpages/dstoryEdit.aspx"				"13,14"
+
+21	2		"Giving Opportunities"		"Giving Opportunities"			"giving/default.aspx"					"15,16,17,18,19,20,21,22,23"
+
+22	21			"Colleges"				"Colleges"						"giving/colleges.aspx"					"15,16,17"
+23	22				"New College"		"New College"					"giving/collegeAdd.aspx"				"16,17"
+24	22				"List of Colleges"	"List of Colleges"				"giving/collegeList.aspx"				"15,16,17"
+25	24					""				"Edit College Details"			"giving/collegeEdit.aspx"				"16,17"
+
+
+30	21			"Programs"				"Programs"						"giving/programs.aspx"					"21,22,23"
+31	30				"New Program"		"New Program"					"giving/programAdd.aspx"				"22,23"
+32	30				"List of Programs"	"List of Programs"				"giving/programList.aspx"				"21,22,23"
+33	32					""				"Edit Program Details"			"giving/programEdit.aspx"				"22,23"
+104	32					""				"Assign Colleges to Program"	"giving/programColleges.aspx"			"22,23"
+105	32					""				"Assign Departments to Program"	"giving/programDepartments.aspx"		"22,23"
+
+106	2		"All Web Pages"				"All Web Pages"					"webpages/allPages.aspx"				"3,4,5,6,7,8,12,13,14,15,16,17,18,19,20,21,22,23"
+80	2			""						"Page Information"				"webpages/pageInfo.aspx"				"3,4,5,6,7,8,12,13,14,15,16,17,18,19,20,21,22,23"
+
+
+
+34	-1	"Content Library"				"Content Library"				"contentlibrary/default.aspx"			"24,25,26,27,28,29,30,31"
+
+110	34		"Left Header Images"		"Left Header Images"			"contentlibrary/lefthimages.aspx"		"24,25"
+111	110			"New Image"				"Upload Left Header Image"		"contentlibrary/lefthimageAdd.aspx"		"25"
+112	110			"List of Images"		"List of Left Header Images"	"contentlibrary/lefthimageList.aspx"	"24,25"
+113	110				""					"Left Header Image Information"	"contentlibrary/lefthimageInfo.aspx"	"24,25"
+
+35	34		"Right Header Images"		"Right Header Images"			"contentlibrary/himages.aspx"			"24,25"
+36	35			"New Image"				"Upload Right Header Image"		"contentlibrary/himageAdd.aspx"			"25"
+37	35			"List of Images"		"List of Right Header Images"	"contentlibrary/himageList.aspx"		"24,25"
+
+38	34		"Quotes"					"Quotes"						"contentlibrary/quotes.aspx"			"26,27"
+39	38			"New Quote"				"New Quote"						"contentlibrary/quoteAdd.aspx"			"27"
+40	38			"List of Quotes"		"List of Quotes"				"contentlibrary/quoteList.aspx"			"26,27"
+41	40				""					"Edit Quote"					"contentlibrary/quoteEdit.aspx"			"27"
+
+42	34		"Sidebar Modules"			"Sidebar Modules"				"contentlibrary/modules.aspx"			"28,29"
+43	42			"New Module"			"New Sidebar Module"			"contentlibrary/moduleAdd.aspx"			"29"
+44	42			"List of Modules"		"List of Sidebar Modules"		"contentlibrary/moduleList.aspx"		"28,29"
+45	44				""					"Edit Sidebar Module"			"contentlibrary/moduleEdit.aspx"		"29"
+94	44				""					"Preview Sidebar Module"		"contentlibrary/moduleView.aspx"		"28,29"
+
+46	34		"Files"						"Files"							"contentlibrary/files.aspx"				"30,31"
+47	46			"New File"				"Upload File"					"contentlibrary/fileAdd.aspx"			"31"
+48	46			"List of Files"			"List of Files"					"contentlibrary/fileList.aspx"			"30,31"
+49	48				""					"Edit File Details"				"contentlibrary/fileEdit.aspx"			"31"
+107	48				""					"File Information"				"contentlibrary/myfileInfo.aspx"		"30,31"
+
+72	34		"Images"					"Images"						"contentlibrary/images.aspx"			"30,31"
+73	72			"New Image"				"Upload Image"					"contentlibrary/imageAdd.aspx"			"31"
+74	72			"List of Images"		"List of Images"				"contentlibrary/imageList.aspx"			"30,31"
+75	74				""					"Edit Image Details"			"contentlibrary/imageEdit.aspx"			"31"
+108	74				""					"Image Information"				"contentlibrary/imageInfo.aspx"			"30,31"
+
+
+
+95	-1	"Content Organization"			"Content Organization"			"contentorg/default.aspx"				"32,33,39,40,42,43"
+
+76	95		"Public Tags"				"Public Tags"					"contentorg/tags.aspx"					"39,40"
+77	76			"New Tag"				"New PublicTag"					"contentorg/tagAdd.aspx"				"40"
+78	76			"List of Tags"			"List of Public Tags"			"contentorg/tagList.aspx"				"39,40"
+79	78				""					"Edit Public Tag"				"contentorg/tagEdit.aspx"				"40"
+
+50	95		"File Types"				"File Types"					"contentorg/filetypes.aspx"				"42,43"
+51	50			"List of File Types"	"List of File Types"			"contentorg/filetypeList.aspx"			"42,43"
+52	51				""					"Edit File Type"				"contentorg/filetypeEdit.aspx"			"43"
+
+53	95		"Content Labels"			"Content Labels"				"contentorg/labels.aspx"				"32,33"
+54	53			"New Label"				"New Label"						"contentorg/labelAdd.aspx"				"33"
+55	53			"List of Labels"		"List of Content Labels"		"contentorg/labelList.aspx"				"32,33"
+56	55				""					"Edit Content Label"			"contentorg/labelEdit.aspx"				"33"
+
+
+
+57	-1	"System Settings"				"System Settings"				"settings/default.aspx"					"34,35,36,37,45"
+
+58	57		"Users"						"Users"							"settings/users.aspx"					"34,35"
+59	58			"New User"				"Create User"					"settings/userAdd.aspx"					"35"
+60	58			"List of Users"			"List of Users"					"settings/userList.aspx"				"34,35"
+61	60				""					"Edit User"						"settings/userEdit.aspx"				"35"
+62	60				""					"Set User Roles"				"settings/userRoles.aspx"				"35"
+109	58			"User Archive"			"Archived User Accounts"		"settings/userArchive.aspx"				"35"
+
+63	57		"Roles & Permissions"		"Roles & Permissions"			"settings/roles.aspx"					"36,37"
+64	63			"New Role"				"Create Role"					"settings/roleAdd.aspx"					"37"
+65	63			"List of Roles"			"List of Roles"					"settings/roleList.aspx"				"36,37"
+66	65				""					"Edit Role"						"settings/roleEdit.aspx"				"37"
+67	65				""					"Set Role Users"				"settings/roleUsers.aspx"				"37"
+68	65				""					"Set Role Permissions"			"settings/rolePermissions.aspx"			"37"
+
+100	57		"Custom Pages"				"Custom Pages"					"settings/customPages.aspx"				"45"
+101	100			"New Page"				"Register Custom Page"			"settings/customPageRegister.aspx"		"45"
+102	100			"List of Pages"			"List of Custom Pages"			"settings/customPageList.aspx"			"45"
+103	102				""					"Edit Custom Page"				"settings/customPageEdit.aspx"			"45"
+
+
+
+69	-1	"Reports"						"Reports"						"reports/default.aspx"					"38"
+114	69		""							"User Logs"						"reports/userlogs.aspx"					"38"			
+115	69		""							"Modifications"					"reports/modifications.aspx"			"38"			
+
+70	1	""								"My Account"					"myaccount.aspx"						""			
+71	1	""								"Help"							"help.aspx"								""			
+

@@ -1,0 +1,30 @@
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="[YOUR FILE NAME].aspx.vb" Inherits="Foundation.WebMain.[YOUR FILE NAME]"%>
+<%@ Register TagPrefix="uc" TagName="layout1" Src="_system/controls/LayoutHelper1.ascx" %>
+<%@ Register TagPrefix="uc" TagName="layout2" Src="_system/controls/LayoutHelper2.ascx" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title id="htmlTitle" runat="server"/>
+    <link href="_system/styles/main.css" rel="stylesheet" type="text/css"> 
+  </head>
+  <body>
+    <form id="Form1" method="post" runat="server">    
+		<uc:layout1 id="ucLayoutHelper1" runat="server" />	
+    						
+    						
+Your content goes here.
+Don't forget to replace two instances of [YOUR FILE NAME] in the first line of this page
+    						
+    						
+    													
+		<uc:layout2 id="ucLayoutHelper2" runat="server" />	
+    </form>
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		_uacct = "UA-1066817-3";
+		urchinTracker();
+	</script>    
+  </body>
+</html>

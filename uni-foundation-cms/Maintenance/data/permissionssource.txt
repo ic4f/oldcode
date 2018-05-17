@@ -1,0 +1,116 @@
+//This list includes all permissions, organized by categories to the CMS, each with a unique id.
+//id and parentId can be digits or digits preceeded with a "c" - which indicates a category
+//There must be 3 levels for each permission: cat > subcat > permission. Therefore, a parent of a category must be a first-level category,
+//		and a parent of permission must be a second-level category.
+//Only cats and subcats can be parents.
+//c-1 marks "no parent" 
+//and/or is displayed for permissions only.
+//"and" means that the permission can be added to others - i.e., displayed as a checkbox.
+//"or" means that only one of the permissions in this subcat can be selected - i.e., radios for each or + "none"
+//ids do not have to be sequential.
+//the code is the name of the public static int field in BusinessAdmin.PermissionCode. Create those fields before processing this file.
+
+//current last used cat Id = 28
+//current last used perm Id = 45
+
+//id -- parentid -- and/or -- name -- code
+
+c23	c-1		"Website Organization"
+
+c2	c23			"Website Menus"
+1	c2	or			"view + modify"				"WebsiteOrg_Menus_ViewModify"
+2	c2	or			"view + modify + publish"	"WebsiteOrg_Menus_ViewModifyPublish"
+
+c24	c23			"Page Groups"
+41	c24	or			"view"						"WebsiteOrg_PageGroups_View"
+
+c27	c23			"Homepage Settings"
+44	c27	or			"view + modify"				"WebsiteOrg_HomepageSettings_ViewModify"
+
+c1	c-1		"Web Pages"
+
+c3	c1			"Standard Pages"
+3	c3	or			"view"						"WebPages_Pages_View"
+4	c3	or			"view + modify"				"WebPages_Pages_ViewModify"
+5	c3	or			"view + modify + publish"	"WebPages_Pages_ViewModifyPublish"
+
+c4	c1			"News"
+6	c4	or			"view"						"WebPages_News_View"
+7	c4	or			"view + modify"				"WebPages_News_ViewModify"
+8	c4	or			"view + modify + publish"	"WebPages_News_ViewModifyPublish"
+
+c6	c1			"Donor Stories"
+12	c6	or			"view"						"WebPages_DStories_View"
+13	c6	or			"view + modify"				"WebPages_DStories_ViewModify"
+14	c6	or			"view + modify + publish"	"WebPages_DStories_ViewModifyPublish"
+
+
+c7	c-1		"Giving Opportunities"
+
+c8	c7			"Colleges"
+15	c8	or			"view"						"Giving_Colleges_View"
+16	c8	or			"view + modify"				"Giving_Colleges_ViewModify"
+17	c8	or			"view + modify + publish"	"Giving_Colleges_ViewModifyPublish"
+
+c9	c7			"Departments"
+18	c9	or			"view"						"Giving_Departments_View"
+19	c9	or			"view + modify"				"Giving_Departments_ViewModify"
+20	c9	or			"view + modify + publish"	"Giving_Departments_ViewModifyPublish"
+
+c10	c7			"Programs"
+21	c10	or			"view"						"Giving_Programs_View"
+22	c10	or			"view + modify"				"Giving_Programs_ViewModify"
+23	c10	or			"view + modify + publish"	"Giving_Programs_ViewModifyPublish"
+
+
+c11	c-1		"Content Library"
+
+c12	c11			"Header Images"
+24	c12	or			"view"						"Library_HeaderImages_View"
+25	c12	or			"view + modify"				"Library_HeaderImages_ViewModify"
+
+c13	c11			"Quotes"
+26	c13	or			"view"						"Library_Quotes_View"
+27	c13	or			"view + modify"				"Library_Quotes_ViewModify"
+
+c14	c11			"Sidebar Modules"
+28	c14	or			"view"						"Library_Modules_View"
+29	c14	or			"view + modify"				"Library_Modules_ViewModify"
+
+c15	c11			"Files"
+30	c15	or			"view"						"Library_Files_View"
+31	c15	or			"view + modify"				"Library_Files_ViewModify"
+
+
+c25	c-1		"Content Organization"
+
+c22	c25			"Tags"
+39	c22	or			"view"						"ContentOrg_Tags_View"
+40	c22	or			"view + modify"				"ContentOrg_Tags_ViewModify"
+
+c26	c25			"File Types"
+42	c26	or			"view"						"ContentOrg_FileTypes_View"
+43	c26	or			"view + modify"				"ContentOrg_FileTypes_ViewModify"
+
+c16	c25			"Labels"
+32	c16	or			"view"						"ContentOrg_Labels_View"
+33	c16	or			"view + modify"				"ContentOrg_Labels_ViewModify"
+
+
+c17	c-1		"System Settings"
+
+c18	c17			"Users Accounts"
+34	c18	or			"view"						"SystemSettings_Users_View"
+35	c18	or			"view + modify"				"SystemSettings_Users_ViewModify"
+
+c19	c17			"Roles & Permissions"
+36	c19	or			"view"						"SystemSettings_Roles_View"
+37	c19	or			"view + modify"				"SystemSettings_Roles_ViewModify"
+
+c28	c17			"Custom Pages"
+45	c28	or			"view + modify"				"SystemSettings_CustomPages_ViewModify"
+
+c20	c-1		"Reports"
+
+c21	c20			"Reports"
+38	c21	or			"view"							"Reports_View"
