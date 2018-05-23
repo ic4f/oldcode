@@ -27,3 +27,6 @@ UNI Foundation CMS
 * [2009-twitter-crawler](2009-twitter-crawler)  
 Twitter crawler + information extractor
 
+## License
+[Public Domain](LICENSE)
+
